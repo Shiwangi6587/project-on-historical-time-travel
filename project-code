@@ -9,12 +9,9 @@
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.3/simple-sun-sky.js"></script>
 
-
   </head>
   <body>
     <a-scene>
-
-
 
         <!--link-->
           <a-assest>
@@ -38,7 +35,7 @@
       <img id="building-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_baff3aP7OP31zVsTEtklrqPA4RSuR7f5oQ&usqp=CAU">
       <img id="sky-1" src="https://images.indianexpress.com/2022/05/Best-stargazing-apps-2022-featured.jpg">
      <img id="portal" src="https://thumbs.dreamstime.com/b/geometric-abstract-background-tunnel-wormhole-connected-line-dots-futuristic-d-space-time-portal-visualization-148838837.jpg">
-     <img id="portal-gate-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsa6q2JPBnlUHYC9GJKXUl4S4fG_2B6snKwQ&usqp=CAU">
+     <img id="portal-gate-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Jntt4V8sC8XFPIcqPVfmketOj3GQck52Pg&usqp=CAU">
         </a-assest>
    
    <!-- SUN /SKY -->
@@ -146,7 +143,7 @@
 
 
 
-<!-- MODERN ERA  -->
+<!-- #MODERN ERA  -->
 <a-box scale="18.12 7.28 10.78" position="10. 3.69 0 " src="#modern"></a-box>
 
       <!-- Room 2 -->
@@ -164,7 +161,7 @@
          <!-- floor  -->
          <a-box  rotation="0 0 0"position="0 0.2 0" width="10" height="0.1" depth="10" color="#669c35"></a-box>
       </a-entity>
-
+]
  <!-- road  -->
  <a-plane scale ="1.44 10.14 0 " position="12.29 0.35 0.03" rotation="-90 0 0" src="#road"></a-plane>
  <a-plane scale ="1.44 7.48 0" position="8.73 0.34 0.29" rotation="-90 0 90 " src="#road"></a-plane>
@@ -172,6 +169,37 @@
  <a-plane scale ="0.78 3.92 0" position="8.67 0.34 2.29" rotation="-90 90 90 " src="#road"></a-plane>
  <a-plane scale ="0.72 2.06 0" position="13.94 0.34 0.72" rotation="-90 0 90 " src="#road"></a-plane>
  <a-plane scale ="0.72 2.06 0" position="13.94 0.34 -3.38" rotation="-90 0 90 " src="#road"></a-plane>
+
+
+ <!-- greenery  -->
+ <lp-sphere color="green" max-amplitude="0.9" position="5.41 0 -0.91" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="7.01 0 -0.91" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="9.18 0 -0.91" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="10.37 0 -0.91" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="5.39 0 1.27" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="6.96 0 1.27" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="9.19 0 1.27" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" max-amplitude="0.9" position="10.26 0 1.27" radius="0.5"></lp-sphere>
+ <lp-sphere color="green" rotation="0 90 0" max-amplitude="0.9" position="11.22 0 -2.38" radius="0.5"></lp-sphere>
+  <lp-sphere color="green" rotation="0 90 0" max-amplitude="0.9" position="11.22 0 -0.69" radius="0.5"></lp-sphere>  
+  <lp-sphere color="green" rotation="0 90 0" max-amplitude="0.9" position="11.22 0 4.50" radius="0.5" scale="2.88 1 1"></lp-sphere> 
+  <lp-sphere color="green" rotation="0 90 0" max-amplitude="0.9" position="13.16 0 4.50" radius="0.5" scale="2.88 1 1"></lp-sphere> 
+
+
+<!-- head light  -->
+<a-cylinder  radius="0.1"  height="4" color="black" position="11.27 1.15 -0.71" ></a-cylinder>
+<a-cylinder  radius="0.1"  height="4" color="black" position="8.09 1.15 -0.71" ></a-cylinder>
+<a-cylinder  radius="0.1"  height="4" color="black" position="8.09 1.15 1.19" ></a-cylinder>
+<a-cylinder  radius="0.1"  height="4" color="black" position="11.19 1.15 1.19" ></a-cylinder>
+<a-cylinder  radius="0.1"  height="4" color="black" position="13.10 1.15 1.20" ></a-cylinder>
+<a-cylinder  radius="0.1"  height="4" color="black" position="13.29 1.15 -2.68" ></a-cylinder>
+<!-- light in head-light  -->
+<a-cylinder  radius="0.14"  height="0.5" position="13.31 3.11 -2.71"  src ="#butterfly"></a-cylinder>
+<a-cylinder  radius="0.14"  height="0.5" position="12.93 3.11 1.19"  src ="#butterfly"></a-cylinder>
+<a-cylinder  radius="0.14"  height="0.5" position="11.28 3.11 -0.71"  src ="#butterfly"></a-cylinder>
+<a-cylinder  radius="0.14"  height="0.5"  position="11.21 3.11 1.14"  src ="#butterfly"></a-cylinder>
+<a-cylinder  radius="0.14"  height="0.5"  position="8.07 3.11 1.14"  src ="#butterfly"></a-cylinder>
+<a-cylinder  radius="0.14"  height="0.5" position="8.07 3.11 -0.69"  src ="#butterfly"></a-cylinder>
 
 
 
@@ -192,7 +220,7 @@
         <a-box width="0.1" height="5" depth="5" src="#portal"></a-box>
           <!-- Hole in the wall -->
     <a-entity position="0 1.21 0">
-        <a-box scale="2.16 4.25 0.2"rotation="0 90 90 " src="#portal-gate-1"></a-box>
+        <a-box scale="2.16 3.32 0.2"rotation="0 90 90 " src="#portal-gate-1"></a-box>
        
       </a-entity>
       </a-entity>
@@ -200,10 +228,12 @@
      <!-- CAMERA ENTITY  -->
       <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera></a-entity>
 
-
     </a-scene>
   </body>
 </html
+
+
+
 
 
 
