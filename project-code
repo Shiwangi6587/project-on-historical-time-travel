@@ -141,6 +141,9 @@
   <a-animation  attribute="rotation" to="59 56 360" dur="120" easing="linear" repeat="indefinite" ></a-animation>
  </lp-sphere>
 
+     <!-- Floating Water -->
+     <lp-circle  rotation="-90 90 0 "position="-8.27 0.51 3.92" depth="10" width="10" height="0.8"
+     material="color: #9FD3D3; opacity: 0.5; normalMap: #water-normal; normalScale: 1 1;"></lp-circle>
 
 
 <!-- #MODERN ERA  -->
