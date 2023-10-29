@@ -8,10 +8,14 @@
     <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.5/dist/aframe-low-poly.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.3/simple-sun-sky.js"></script>
-
+     <!-- for controller  -->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-controller-cursor-component/dist/aframe-controller-cursor-component.min.js"></script>
+    <!-- teleport  -->
+    <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@6.1.2/dist/aframe-physics-system.min.js"></script>
+   
   </head>
   <body>
-    <a-scene>
+    <a-scene vr-mode-ui="enabled: true" >
 
         <!--link-->
           <a-assest>
@@ -27,7 +31,8 @@
       <img id="butterfly" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnAq7Yh9_8EUqFghg4ZcZ_3CvgQ5TPjStA5XpPH9-9Dg&s"> 
       <img id="fire" src="https://media.istockphoto.com/id/113494458/photo/fire-isolated-over-black-background.jpg?s=170667a&w=0&k=20&c=mV7mzBstDEZsx-Tlq1xOQDgVLkFYA5wzAvyllMUjHN8=">
            <!-- modern side link  -->
-      <img id="modern" src="https://images.pexels.com/photos/1822685/pexels-photo-1822685.jpeg"> 
+           
+      <img id="modern" src="https://cdn.pixabay.com/photo/2016/01/23/01/23/city-1156890_960_720.jpg"> 
       <img id="road" src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3is4no7Y9y3yPxqgkT84pbjF3p7wTmrTsMYqFgmkm9g&s">
       <img id="modern-wall" src="https://images.unsplash.com/photo-1611641613359-f698d54566dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eSUyMGJ1aWxkaW5nfGVufDB8fDB8fHww&w=1000&q=80">
       <img id="building-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMlZEQPW_wzpfAhH0lHGa3A11DVcYgE0S7FA&usqp=CAU">
@@ -141,12 +146,12 @@
   <a-animation  attribute="rotation" to="59 56 360" dur="120" easing="linear" repeat="indefinite" ></a-animation>
  </lp-sphere>
 
+
      <!-- Floating Water -->
      <lp-circle  rotation="-90 90 0 "position="-8.27 0.51 3.92" depth="10" width="10" height="0.8"
      material="color: #9FD3D3; opacity: 0.5; normalMap: #water-normal; normalScale: 1 1;"></lp-circle>
 
-
-<!-- #MODERN ERA  -->
+<!-- MODERN ERA  -->
 <a-box scale="18.12 7.28 10.78" position="10. 3.69 0 " src="#modern"></a-box>
 
       <!-- Room 2 -->
@@ -164,7 +169,7 @@
          <!-- floor  -->
          <a-box  rotation="0 0 0"position="0 0.2 0" width="10" height="0.1" depth="10" color="#669c35"></a-box>
       </a-entity>
-]
+
  <!-- road  -->
  <a-plane scale ="1.44 10.14 0 " position="12.29 0.35 0.03" rotation="-90 0 0" src="#road"></a-plane>
  <a-plane scale ="1.44 7.48 0" position="8.73 0.34 0.29" rotation="-90 0 90 " src="#road"></a-plane>
@@ -206,6 +211,9 @@
 
 
 
+
+
+
  <!-- building  -->
  <a-box scale ="2 4 2 " position="10.28 2.25 2.39" rotation="0 0 0 " src="#building-1"></a-box>
  <a-box scale ="2.24 4 2.52 " position="7.00 2.25 2.77" rotation="0 0 0 " src="#building-2"></a-box>
@@ -231,9 +239,25 @@
      <!-- CAMERA ENTITY  -->
       <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera></a-entity>
 
+      <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera aframe-controller-cursor></a-entity>
+   
+
+    <!-- for teleport  -->
+      <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera aframe-teleport-controls="button: trigger; collisionEntities: [a-box]"></a-entity>
+   
+  <a-entity camera="active: true" look-controls wasd-controls position="0 1.6 0" data-aframe-default-camera aframe-teleport-controls="button: trigger; collisionEntities: [a-box]" aframe-motion-controls></a-entity>
+
+
     </a-scene>
   </body>
 </html
+
+
+
+
+
+
+
 
 
 
